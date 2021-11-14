@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bank", "Bank\Bank.csproj", "{E8EB639C-9E91-4C8E-AF86-800B159536D9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bank.Test", "Bank.Test\Bank.Test.csproj", "{B6036268-B09D-4436-BE53-57895A1450F3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution", "Solution", "{A5AAD9E5-5139-4DBF-AE8A-1393B2E1BB04}"
+	ProjectSection(SolutionItems) = preProject
+		Bank.PostMan\Bank.postman_collection.json = Bank.PostMan\Bank.postman_collection.json
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E8EB639C-9E91-4C8E-AF86-800B159536D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8EB639C-9E91-4C8E-AF86-800B159536D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8EB639C-9E91-4C8E-AF86-800B159536D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8EB639C-9E91-4C8E-AF86-800B159536D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6036268-B09D-4436-BE53-57895A1450F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6036268-B09D-4436-BE53-57895A1450F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6036268-B09D-4436-BE53-57895A1450F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6036268-B09D-4436-BE53-57895A1450F3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2647246A-3785-493F-B666-E50627729C67}
+	EndGlobalSection
+EndGlobal

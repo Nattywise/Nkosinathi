@@ -1,0 +1,608 @@
+{
+	"info": {
+		"_postman_id": "48378bec-1b9b-4bfa-9f99-0deb70e5d9b0",
+		"name": "Bank",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "GetCustomers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44357/api/customerlist",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44357",
+							"path": [
+								"api",
+								"customerlist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCustomer1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44357/api/customer/?id=1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44357",
+							"path": [
+								"api",
+								"customer",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetCustomer99999-Fail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44357/api/customer/?id=99999",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44357",
+							"path": [
+								"api",
+								"customer",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "99999"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "NewCustomer5",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Simple Simon\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44357/api/customer",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44357",
+							"path": [
+								"api",
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteCustomer5",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44357/api/customer/?id=5",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44357",
+							"path": [
+								"api",
+								"customer",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateCustomer",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerID\":1,\r\n    \"name\": \"Arisha Barron-Nee Naidoo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44357/api/customer",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44357",
+							"path": [
+								"api",
+								"customer"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Account",
+			"item": [
+				{
+					"name": "GetAccounts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44357/api/accountlist",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44357",
+							"path": [
+								"api",
+								"accountlist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "NewAccountCustomer5Saving",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerid\": 5,\r\n    \"accountname\": \"Savings Account\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44357/api/account?initialdeposit=1000",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44357",
+							"path": [
+								"api",
+								"account"
+							],
+							"query": [
+								{
+									"key": "initialdeposit",
+									"value": "1000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAccount1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44357/api/account/?id=1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44357",
+							"path": [
+								"api",
+								"account",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAccount1Balance",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44357/api/accountbalance/?id=1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44357",
+							"path": [
+								"api",
+								"accountbalance",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "NewAccountCustomer5Cheque",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerid\": 5,\r\n    \"accountname\": \"Cheque Account\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44357/api/account?initialdeposit=1000",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44357",
+							"path": [
+								"api",
+								"account"
+							],
+							"query": [
+								{
+									"key": "initialdeposit",
+									"value": "1000"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAccount2Balance",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44357/api/accountbalance/?id=2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44357",
+							"path": [
+								"api",
+								"accountbalance",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteAccount1",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44357/api/account/?id=1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44357",
+							"path": [
+								"api",
+								"account",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateAccount",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"accountid\":1,\r\n    \"accountname\": \"Cheque Account\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44357/api/account",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44357",
+							"path": [
+								"api",
+								"account"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Transaction",
+			"item": [
+				{
+					"name": "GetTransactions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44357/api/transactionlist",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44357",
+							"path": [
+								"api",
+								"transactionlist"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetTransaction1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44357/api/transaction/?id=1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44357",
+							"path": [
+								"api",
+								"transaction",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetTransactionForAccount1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44357/api/transactionusingaccountid/?accountid=1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44357",
+							"path": [
+								"api",
+								"transactionusingaccountid",
+								""
+							],
+							"query": [
+								{
+									"key": "accountid",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetTransfersForAccount1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44357/api/transfersusingaccountid/?accountid=1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44357",
+							"path": [
+								"api",
+								"transfersusingaccountid",
+								""
+							],
+							"query": [
+								{
+									"key": "accountid",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetTransactionForAccount2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44357/api/transactionusingaccountid/?accountid=2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44357",
+							"path": [
+								"api",
+								"transactionusingaccountid",
+								""
+							],
+							"query": [
+								{
+									"key": "accountid",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetTransfersForAccount2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44357/api/transfersusingaccountid/?accountid=2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44357",
+							"path": [
+								"api",
+								"transfersusingaccountid",
+								""
+							],
+							"query": [
+								{
+									"key": "accountid",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Transfer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"accountidfrom\": 2,\r\n    \"accountidto\": 1,\r\n    \"amount\": 1350.00\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44357/api/transactiontransfer",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44357",
+							"path": [
+								"api",
+								"transactiontransfer"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
