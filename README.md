@@ -2,7 +2,7 @@
 
 The API is build in ASP.Net core 3.1 using entity framework and it is using in memory database.
 
-Open the API in Visual Studio 2019 and run it, the initial list of customers is being loaded customer table.
+Open the API in Visual Studio 2019 and run it, the initial list of customers is being loaded on the customer table.
 
 I recommend that you test the API using Postman application. there is a json test script under the folder \\Bank\Bank.PostMan which can be imported and it has all the HTTP Requests.
 
