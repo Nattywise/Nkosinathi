@@ -1,6 +1,6 @@
 **Basic Bank API Test Documentation**
 
-The API is build in .Net core 3.1 and it is using entity framework with the in memory database.
+The API is build in ASP.Net core 3.1 using entity framework and it is using in memory database.
 
 Open the API in Visual Studio 2019 and run it, the initial list of customers is being loaded customer table.
 
